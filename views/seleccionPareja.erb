@@ -13,28 +13,28 @@
 			<tr align="center">
 				<td><input type="submit" name="Imagen 1" id="Imagen 1" value="Imagen 1"></td>
 				<td>
-					<input type="hidden" id="1" name="1" value="" disabled="true" size="2">
+					<input type="hidden" id="1" name="1" value="<%= @valores[0]%>" size="2">
 					<%= @valores[0]%>
 				</td>
 			</tr>
 			<tr align="center">
 				<td><input type="submit" name="Imagen 2" value="Imagen 2"></td>
 				<td>
-					<input type="hidden" id="2"  name="2" value="" disabled="true" size="2">
+					<input type="hidden" id="2"  name="2" value="<%= @valores[1]%>" size="2">
 					<%= @valores[1]%>
 				</td>
 			</tr>
 			<tr align="center">
 				<td><input type="submit" name="Imagen 3" value="Imagen 3"></td>
 				<td>
-					<input type="hidden" id="3"  name="3" value="" disabled="true" size="2">
+					<input type="hidden" id="3"  name="3" value="<%= @valores[2]%>" size="2">
 					<%= @valores[2]%>
 				</td>
 			</tr>
 			<tr align="center">
 				<td><input type="submit" name="Imagen 4" value="Imagen 4"></td>
 				<td>
-					<input type="hidden" id="4"  name="4" value="" disabled="true" size="2">
+					<input type="hidden" id="4"  name="4" value="<%= @valores[3]%>" size="2">
 					<%= @valores[3]%>
 				</td>
 			</tr>
@@ -44,8 +44,11 @@
 				</td>
 			</tr>
 		</table>
+
 		<%= @valores%>
+		<br>
 		<%= @datos%>
+
 	</form>
 </body>
 </html>
