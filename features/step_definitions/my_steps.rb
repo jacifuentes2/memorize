@@ -1,12 +1,11 @@
 Given(/^Visitar pagina$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit "/"
 end
 
-When(/^Selecciona Boton "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^Selecciona Boton "([^"]*)"$/) do |name|
+  click_button(name)
 end
 
-Then(/^Debe mostrar el valor "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^Debe mostrar el valor "([^"]*)"$/) do |text|
+  expect(page.body).to match /#{text}/m
 end
-
