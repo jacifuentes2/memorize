@@ -2,25 +2,30 @@ require 'sinatra'
 require './config'
 
 get '/' do
-	@imagen1 = ""
-	@imagen2 = ""
-	@imagen3 = ""
-	@imagen4 = ""
+	@valores = ["","","",""]
 	erb :seleccionPareja
 end
-get '/imagen1' do
-	@imagen1 = "7"
-	erb :seleccionPareja
-end
-get '/imagen2' do
-	@imagen2 = "14"
-	erb :seleccionPareja
-end
-get '/imagen3' do
-	@imagen3 = "7"
-	erb :seleccionPareja
-end
-get '/imagen4' do
-	@imagen4 = "14"
+
+post '/validar' do
+
+	@valores = ["","","",""]
+
+	imagen1 = params["Imagen 1"]
+	imagen2 = params["Imagen 2"]
+	imagen3 = params["Imagen 3"]
+	imagen4 = params["Imagen 4"]
+
+	if(imagen1 != nil)
+		@valores[0] = "7"
+	elsif (imagen2 != nil)
+		@valores[1] = "14"
+	elsif (imagen3 != nil)
+		@valores[2] = "7"
+	elsif (imagen4 != nil)
+		@valores[3] = "14"
+	end	
+	
+	@datos = params
+
 	erb :seleccionPareja
 end

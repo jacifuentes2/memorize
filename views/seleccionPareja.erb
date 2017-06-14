@@ -4,21 +4,48 @@
 	<title>Seleccion Pareja</title>
 </head>
 <body>
-	<form action="/imagen1">
-		<input type="submit" name="Imagen 1" value="Imagen 1">
-		<h1><%= @imagen1%></h1>
-	</form>
-	<form action="/imagen2">
-		<input type="submit" name="Imagen 2" value="Imagen 2">
-		<h1><%= @imagen2%></h1>
-	</form>
-	<form action="/imagen3">
-		<input type="submit" name="Imagen 3" value="Imagen 3">
-		<h1><%= @imagen3%></h1>
-	</form>
-	<form action="/imagen4">
-		<input type="submit" name="Imagen 4" value="Imagen 4">
-		<h1><%= @imagen4%></h1>
+	<form action="/validar" method="post">
+		<table align="center" border="1" >
+			<tr align="center">
+				<th>Imagen</th>
+				<th>Valor</th>
+			</tr>
+			<tr align="center">
+				<td><input type="submit" name="Imagen 1" id="Imagen 1" value="Imagen 1"></td>
+				<td>
+					<input type="hidden" id="1" name="1" value="" disabled="true" size="2">
+					<%= @valores[0]%>
+				</td>
+			</tr>
+			<tr align="center">
+				<td><input type="submit" name="Imagen 2" value="Imagen 2"></td>
+				<td>
+					<input type="hidden" id="2"  name="2" value="" disabled="true" size="2">
+					<%= @valores[1]%>
+				</td>
+			</tr>
+			<tr align="center">
+				<td><input type="submit" name="Imagen 3" value="Imagen 3"></td>
+				<td>
+					<input type="hidden" id="3"  name="3" value="" disabled="true" size="2">
+					<%= @valores[2]%>
+				</td>
+			</tr>
+			<tr align="center">
+				<td><input type="submit" name="Imagen 4" value="Imagen 4"></td>
+				<td>
+					<input type="hidden" id="4"  name="4" value="" disabled="true" size="2">
+					<%= @valores[3]%>
+				</td>
+			</tr>
+			<tr align="center">
+				<td colspan="2">
+					<input type="submit" name="Validar" value="Validar">
+				</td>
+			</tr>
+		</table>
+		<%= @valores%>
+		<%= @datos%>
 	</form>
 </body>
 </html>

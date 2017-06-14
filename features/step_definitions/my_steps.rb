@@ -7,5 +7,5 @@ When(/^Selecciona Boton "([^"]*)"$/) do |name|
 end
 
 Then(/^Debe mostrar el valor "([^"]*)"$/) do |text|
-  expect(page.body).to match /#{text}/m
+  expect(page.body).to match /#{text}/
 end
